@@ -1,14 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Admin = ({ user }) => {
+function Admin() {
   return (
-    <>
-      <h1>Página de administrador</h1>
-      {user.role === 'admin' && (
-        <p>Bienvenido a la página de administrador, {user.username}!</p>
-      )}
-    </>
-  );
-};
+    <div>Admin</div>
+  )
+}
 
-export default Admin;
+export default Admin
