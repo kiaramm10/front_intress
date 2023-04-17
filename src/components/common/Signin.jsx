@@ -110,6 +110,7 @@ function Signin() {
       </div>
     </div>
   );
+  );
 }
 
-export default Signin;
+export default Signin
