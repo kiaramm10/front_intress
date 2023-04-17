@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import styles from "../../styles/css/main.css";
+import styles from "../../styles/css/components/Signin.css";
 
 function Signin() {
   const [timestart, setTimestart] = useState("");
@@ -77,29 +77,29 @@ function Signin() {
   };
 
   return (
-    <div className={styles.container} style={{ backgroundColor: "rgba(217, 217, 217, 1)" }}>
-      <h1 className={styles.title}>Fichar</h1>
-      <div className={styles.item}>
-        <label htmlFor="timestart">Hora de inicio</label>
-        <button onClick={handleTimeStart} className={styles.button}>
+    <div className=".signin-container" style={{ backgroundColor: "rgba(217, 217, 217, 1)" }}>
+      <h1 className=".signin-title">Fichar</h1>
+      <div className=".signin-item">
+        <label className=".signin-label" htmlFor="timestart">Hora de inicio</label>
+        <button onClick={handleTimeStart} className=".signin-button">
           {timestart ? `Inicio (${timestart})` : "Inicio"}
         </button>
-        <div className={styles.timeContainer}>{timestart}</div>
+        <div className=".signin-timeContainer">{timestart}</div>
       </div>
-      <div className={styles.item}>
-        <label htmlFor="timerestart">Control de jornada</label>
-        <button onClick={isRunning ? handleTimeStop : handleTimeRestart} className={styles.button}>
+      <div className=".signin-item">
+        <label className=".signin-label" htmlFor="timerestart">Control de jornada</label>
+        <button onClick={isRunning ? handleTimeStop : handleTimeRestart} className=".signin-button">
           {isRunning ? "Stop" : "Restart"}
         </button>
       </div>
-      <div className={styles.item}>
-        <label htmlFor="timefinish">Hora de finalización</label>
-        <button onClick={handleTimeFinish} className={styles.button}>
+      <div className=".signin-item">
+        <label className=".signin-label" htmlFor="timefinish">Hora de finalización</label>
+        <button onClick={handleTimeFinish} className=".signin-button">
           {timefinish ? `Fin jornada (${timefinish})` : "Fin jornada"}
         </button>
       </div>
-      <div className={styles.item}>
-        <label htmlFor="hourcount">Horas trabajadas</label>
+      <div className=".signin-item">
+        <label className=".signin-label" htmlFor="hourcount">Horas trabajadas</label>
         <input
           type="text"
           name="hourcount"
@@ -110,7 +110,7 @@ function Signin() {
       </div>
     </div>
   );
-  );
+
 }
 
 export default Signin

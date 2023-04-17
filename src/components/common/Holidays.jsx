@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import styles from "../../styles/css/main.css"
+import '../../styles/css/components/Holidays.css';
 
 function Holidays() {
   const today = new Date();
@@ -48,10 +48,10 @@ function Holidays() {
   ];
 
   return (
-    <div className={styles.calendarContainer}>
-      <div className={styles.calendarHeader}>
-        <div className={styles.selectWrapper}>
-          <select className={styles.select} value={selectedMonth} onChange={handleMonthChange}>
+    <div className=".calendarContainer">
+      <div className=".calendarHeader">
+        <div className=".selectWrapper">
+          <select className=".select-holidays" value={selectedMonth} onChange={handleMonthChange}>
             {monthNames.map((month, index) => (
               <option key={index} value={index}>
                 {month}
@@ -59,20 +59,20 @@ function Holidays() {
             ))}
           </select>
         </div>
-        <div className={styles.selectWrapper}>
-          <select className={styles.select} value={selectedYear} onChange={handleYearChange}>
+        <div className=".selectWrapper">
+          <select className=".select-holidays" value={selectedYear} onChange={handleYearChange}>
             <option value={selectedYear - 1}>{selectedYear - 1}</option>
             <option value={selectedYear}>{selectedYear}</option>
             <option value={selectedYear + 1}>{selectedYear + 1}</option>
           </select>
         </div>
       </div>
-      <div className={styles.calendarDays}>
+      <div className=".calendarDays">
         {daysArray().map((day, index) => (
           <div
             key={index}
-            className={`${styles.calendarDay} ${
-              selectedDate === day ? styles.selectedDay : ""
+            className={`$".calendarDay" ${
+              selectedDate === day ? ".selectedDay" : ""
             }`}
             onClick={() => handleDayClick(day)}
           >

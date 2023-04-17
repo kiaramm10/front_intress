@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../src/styles/css/components/Holidays.css';
+import '../src/styles/css/components/Signin.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

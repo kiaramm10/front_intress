@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../api/axios';
-import '../styles/css/main.css'
+import '../styles/css/pages/login.css';
 
 const LOGIN_URL = '/api/login_check'
 
